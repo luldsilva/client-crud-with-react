@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 export function Cadastrate() {
-  const baseURL = "https://localhost:44384/api/Client";
+  const baseURL = "https://client-crud-basic.azurewebsites.net/api/Client";
 
   const [data, setData] = useState([]);
 
