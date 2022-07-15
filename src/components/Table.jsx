@@ -9,7 +9,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export function Table({ content }) {
-  const baseURL = "https://localhost:44384/api/Client";
+  const baseURL = "https://client-crud-basic.azurewebsites.net/api/Client";
   const [data, setData] = useState([]);
 
   const navigate = useNavigate();
@@ -91,11 +91,10 @@ export function Table({ content }) {
   };
 
   return (
-    <div>
-      <h3>Cadastro de Clientes</h3>
+    <div className={styles.justifyContentAround}>
       <header>
         <button onClick={handleEdit} className={styles.CadastrateButton}>
-          <Plus size={22} className={styles.Icons} />
+          <Plus size={20} className={styles.Icons} />
           Cadastrar
         </button>
       </header>
@@ -121,16 +120,14 @@ export function Table({ content }) {
               <td>{person.cpf_number}</td>
               <td>{person.rg_number}</td>
               <td>
-                <button className={styles.button}>
-                  <PencilLine
-                    size={22}
-                    className={styles.Icons}
-                    onClick={() => selectedClient(person, "Editar")}
-                  />
+                <button
+                  className={styles.buttonEdit}
+                  onClick={() => selectedClient(person, "Editar")}
+                >
                   Editar
                 </button>
                 <button
-                  className={styles.button}
+                  className={styles.buttonDelete}
                   onClick={() => selectedClient(person, "Excluir")}
                 >
                   Excluir
@@ -240,7 +237,7 @@ export function Table({ content }) {
       </Modal>
       <Modal isOpen={deleteModal}>
         <ModalBody>
-          Confirma a exclusão deste cliente:
+          Confirma a exclusão deste cliente: {""}
           {clientSelected && clientSelected.name} ?
         </ModalBody>
         <ModalFooter>

@@ -1,5 +1,5 @@
 .justifyContentAround {
-  text-align: -webkit-center;
+  text-align: -webkit-left;
   display: flex;
   justify-content: center;
 }

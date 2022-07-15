@@ -3,12 +3,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export function CadastrateClient() {
-  const baseURL = "https://localhost:44384/api/Client";
+  const baseURL = "https://client-crud-basic.azurewebsites.net/api/Client";
 
   const [clientSelected, setClientSelected] = useState({
     id: "",
     name: "",
-    date_of_brithday: "",
     cellphone: "",
     address: "",
     social_media: "",
@@ -17,7 +16,6 @@ export function CadastrateClient() {
   });
 
   const handleChange = (e) => {
-    event.preventDefault();
     const { name, value } = e.target;
     setClientSelected({
       ...clientSelected,
@@ -36,6 +34,8 @@ export function CadastrateClient() {
       })
       .catch((error) => {
         console.log("Error: ", error);
+        console.log("Error: ", error.message);
+        console.log("Error: ", error.stack);
       });
   };
 
@@ -55,16 +55,6 @@ export function CadastrateClient() {
           />
         </div>
         <div className={styles.formGroup}>
-          <label>Nascimento </label>
-          <input
-            type="text"
-            placeholder="Data de Nascimento"
-            className={styles.formControl}
-            name="date_of_brithday"
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.formGroup}>
           <label>Telefone</label>
           <input
             type="text"
@@ -72,7 +62,6 @@ export function CadastrateClient() {
             className={styles.formControl}
             name="cellphone"
             onChange={handleChange}
-            required
           />
         </div>
         <div className={styles.formGroup}>

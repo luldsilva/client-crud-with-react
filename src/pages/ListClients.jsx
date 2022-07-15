@@ -5,8 +5,7 @@ import ServerTable from "react-strap-table";
 import { Table } from "../components/Table";
 
 export function ListClients() {
-  //const baseURL = "https://client-crud-basic.azurewebsites.net/api/Client";
-  const baseURL = "https://localhost:44384/api/Client";
+  const baseURL = "https://client-crud-basic.azurewebsites.net/api/Client";
 
   const [data, setData] = useState([]);
 
