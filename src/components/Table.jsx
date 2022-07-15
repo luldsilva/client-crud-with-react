@@ -161,16 +161,6 @@ export function Table({ content }) {
               value={clientSelected && clientSelected.name}
             />
             <br />
-            <label>Data Nascimento: </label>
-            <br />
-            <input
-              type="text"
-              className="form-control"
-              name="date_of_brithday"
-              onChange={handleChange}
-              value={clientSelected && clientSelected.date_of_brithday}
-            />
-            <br />
             <label>Telefone: </label>
             <br />
             <input
