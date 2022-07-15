@@ -1,0 +1,43 @@
+.button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--purple-500);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.1s;
+}
+
+.button:hover {
+  background: var(--purple-400);
+}
+.CadastrateButton {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--purple-500);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.1s;
+}
+.CadastrateButton:hover {
+  background: var(--purple-400);
+}
+.Icons {
+  margin-right: 0.5rem;
+}
+tbody {
+  color: var(--white);
+}
+th {
+  color: var(--white);
+}
+td {
+  color: var(--white);
+}
